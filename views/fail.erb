@@ -1,0 +1,13 @@
+<main>
+  <audio src="/mp3/death.mp3" autoplay>
+	<p>If you are reading this, it is because your browser does not support the audio element.</p>
+  </audio>
+  <h1>Oh dear... you failed...</h1>
+  <img src="<%= picture %>" alt="hangman">
+  <pre><%= reveal_secret %></pre> <!-- Keeps proof of uncompleted template -->
+  <p><b>Wrong attempts: <%= mistakes %></b></p>  <!-- Number of mistakes (proof they are 6) -->
+  <p><b>The word was <%= phrase %>, pal</b></p> <!-- Shows what the word was all along. -->
+  <form action="/">
+    <input type="submit" value="Oh no...">
+  </form>  
+</main>

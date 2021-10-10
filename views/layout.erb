@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WHEEL OF FORTUNE</title>
+  <style>
+  * {
+  box-sizing: border-box;
+}
+
+header, h1, h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+footer, h1, h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;  
+}
+
+body {
+  color: #a4afb8; 
+  background-image: url("img/bckg.jpg");
+  background-size: 2000px 1100px;
+  overflow: auto;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+main {
+  display: block;
+  margin: auto;
+  width: 25%;
+  min-width: 600px;
+  border-right: 9px ridge #08A496;
+  border-left: 9px ridge #08A496;
+  border-radius: 40px;
+  text-align: center;
+}
+  
+  header { color: white; font: bold 60px Helvetica, Arial, Sans-Serif;
+		       text-shadow: 1px 1px black, 2px 2px blue, 3px 3px darkblue;
+		       -webkit-transition: all 0.12s ease-out;
+		       -moz-transition: all 0.12s ease-out;
+		       -o-transition: all 0.12s ease-out;
+		}
+		header:hover {
+		    position: relative; top: -3px; left: -3px; 
+		    text-shadow: 1px 1px #4d4141, 2px 2px #4d4141, 3px 3px #4d4141, 4px 4px #4d4141, 5px 5px #4d4141, 6px 6px #4d4141;
+		}
+		
+	h1 { color: #131313;
+			letter-spacing: .15em;
+			text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585, -8px 16px 1px #8b8a89, -9px 18px 1px #8f8e8d, -10px 20px 1px #949392;
+			color: #131313;
+		}
+		
+	h2 { ccolor: #FFFFFF;
+			text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd;
+			color: #FFFFFF;
+        }
+		
+	h3 { color: #FFFFFF;
+			text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+			color: #FFFFFF;
+		}	
+		
+	input[type=text] {
+  width: 30%;
+  box-sizing: border-box;
+  border-right: 9px ridge #08A496;
+  border-left: 9px ridge #08A496;
+  border-radius: 50px;
+  font-size: 16px;
+  background-color: pink;
+  padding: 12px 20px 12px 0px;
+  }
+  
+  input[type=submit]{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #9355D3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+input[type=submit]:hover {background-color: #7e16ea}
+
+input[type=submit]:active {
+  background-color: #7e16ea;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}	
+		
+	p, pre {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 20px;
+	letter-spacing: 0.8px;
+	word-spacing: -0.8px;
+	color: #FFFFFF;
+	font-weight: 700;
+	font-style: normal;
+	font-variant: small-caps;
+	text-transform: none;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+	
+	.dropbtn {
+  background-color: #9582D9;
+  color: white;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 25px;
+  border: none;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-right: 45%;
+  margin-left: 41.5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 312px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 2em;
+  font-size: 18px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #9355D3;}
+		
+  </style>
+</head>
+<body>
+  <header>
+  <b>Wheel of Fortune</b>
+  </header>
+  <%= yield %>
+  <footer>
+  <h3>Will you be fortunate enough to reveal my secrets...?</h3>
+  </footer>
+</body>
+</html>

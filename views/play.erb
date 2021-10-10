@@ -1,0 +1,15 @@
+<main>
+  <img src="<%= picture %>" alt="wheel_of_fortune"> <!-- Where relevant picture according to turns is displayed. -->
+  <pre><%= reveal_secret %></pre> <!-- Template position -->
+  <p><b>Give a letter or try your luck with a word</b></p>
+  <form action="/play" method="post">
+    <input type="text" name="guess" id="guess" placeholder="  Do your best...">
+    <input type="submit" value="GO!">
+  </form>
+  <p><b><%= warning %></b></p> <!--Where warning is displayed if necessary. -->
+  <p><b>Guesses so far: <%= guesses %></b></p> <!-- Attempted letters. -->
+  <p><b>Wrong attempts: <%= mistakes %></b></p> <!-- Number of wrong guesses -->
+  <form action="/">
+    <input type="submit" value="Quit">
+  </form>
+</main>
